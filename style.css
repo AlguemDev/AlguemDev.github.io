@@ -23,7 +23,7 @@ body {
   padding: 32px;
 }
 
-/* HEADER */
+
 .header {
   text-align: center;
   margin-bottom: 22px;
@@ -46,7 +46,7 @@ body {
   margin-top: 4px;
 }
 
-/* SEPARATOR */
+
 hr {
   border: none;
   height: 1px;
@@ -54,7 +54,7 @@ hr {
   margin: 18px 0;
 }
 
-/* CARDS */
+
 .card {
   background: rgba(255, 0, 0, 0.06);
   border: 1px solid rgba(255, 0, 0, 0.15);
@@ -75,7 +75,7 @@ hr {
   color: #e6e6e6;
 }
 
-/* LINKS */
+
 .links {
   display: flex;
   gap: 12px;
@@ -104,7 +104,7 @@ hr {
   color: #ff4d4d;
 }
 
-/* RODAPÉ */
+
 .footer {
   margin-top: 28px;
   text-align: center;
