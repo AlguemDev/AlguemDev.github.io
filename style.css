@@ -157,3 +157,9 @@ footer a {
   z-index: -1;
   background: transparent;
 }
+.card .tech {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
