@@ -2,41 +2,267 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miguel | Desenvolvedor</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Miguel | Desenvolvedor Web</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #eaeaea;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      background: radial-gradient(circle at top, #300000, #0f0f0f);
+    }
+
+    .hero {
+      max-width: 900px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff3b3b;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 span {
+      color: #ff3b3b;
+    }
+
+    .hero-text p {
+      max-width: 500px;
+      margin-bottom: 20px;
+      color: #cfcfcf;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #ff3b3b;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #d92f2f;
+    }
+
+    .btn-outline {
+      border: 1px solid #ff3b3b;
+      color: #ff3b3b;
+    }
+
+    .btn-outline:hover {
+      background: #ff3b3b;
+      color: #fff;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      border-left: 4px solid #ff3b3b;
+      padding-left: 12px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #181818;
+      border-radius: 10px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #ff3b3b;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #cfcfcf;
+      margin-bottom: 15px;
+    }
+
+    .tech {
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    .about p {
+      max-width: 800px;
+      color: #cfcfcf;
+    }
+
+    .skills {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      background: #181818;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #0a0a0a;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #ff3b3b;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-  <main class="container">
-    <header class="header">
-      <h1>Miguel</h1>
-      <p class="subtitle">Desenvolvedor • Programação • Sistemas</p>
-    </header>
+  <!-- HERO -->
+  <header>
+    <div class="hero">
+      <img 
+        src="https://i.ibb.co/Q7yC2Jw0/20260111-205828-0000.png" 
+        alt="Foto de Miguel"
+      >
+      <div class="hero-text">
+        <h1>Oi, eu sou <span>Miguel</span></h1>
+        <p>
+          Sou desenvolvedor web e curto transformar ideias em projetos reais.
+          Gosto de código bem organizado, interfaces simples e soluções que
+          realmente funcionam.
+        </p>
+        <div class="buttons">
+          <a href="#projetos" class="btn btn-primary">Meus projetos</a>
+          <a href="#contato" class="btn btn-outline">Falar comigo</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <section class="card">
-      <h2>Sobre mim</h2>
-      <p>
-        Sou desenvolvedor com interesse em sistemas, interfaces e soluções digitais.
-        Trabalho com projetos próprios focados em organização, funcionalidade
-        e evolução constante. Busco sempre aprender, aprimorar minhas habilidades
-        e construir produtos com identidade e propósito.
-      </p>
-    </section>
+  <!-- PROJETOS -->
+  <section id="projetos">
+    <h2>Projetos</h2>
 
-    <section class="card">
-      <h2>O que eu faço</h2>
-      <p>
-        Desenvolvimento de projetos pessoais e experimentais envolvendo lógica,
-        estruturação de sistemas, front-end e back-end. Tenho interesse em criar
-        experiências sólidas, funcionais e bem planejadas.
-      </p>
-    </section>
+    <div class="projects">
+      <div class="card">
+        <h3>Projeto pessoal</h3>
+        <p>
+          Projeto criado para treinar lógica de programação, organização de
+          arquivos e construção de layouts responsivos.
+        </p>
+        <div class="tech">HTML • CSS • JavaScript</div>
+      </div>
 
-    <footer class="footer">
-      <span>✔ Portfólio pessoal — Miguel</span>
-    </footer>
-  </main>
+      <div class="card">
+        <h3>Experimentos e estudos</h3>
+        <p>
+          Pequenos sistemas e testes que uso para aprender coisas novas,
+          melhorar meu código e ganhar mais experiência prática.
+        </p>
+        <div class="tech">JavaScript • Git • GitHub</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about">
+    <h2>Sobre mim</h2>
+    <p>
+      Sou um desenvolvedor em constante evolução. Gosto de aprender na prática,
+      criar meus próprios projetos e melhorar um pouco todo dia.
+      Meu foco é escrever código limpo, entender bem o que estou fazendo
+      e construir soluções simples, mas bem feitas.
+    </p>
+  </section>
+
+  <!-- TECNOLOGIAS -->
+  <section>
+    <h2>O que eu uso</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Lógica de Programação</div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <footer id="contato">
+    <p>Quer trocar uma ideia ou falar sobre algum projeto?</p>
+    <p>
+      <a href="mailto:eualguemdev@gmail.com">
+        eualguemdev@gmail.com
+      </a>
+    </p>
+    <p>© 2026 — Miguel</p>
+  </footer>
 
 </body>
 </html>
