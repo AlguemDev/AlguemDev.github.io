@@ -148,14 +148,20 @@ footer a {
   display: block;
   margin: 10px 0;
 }
-#fireworks {
+#fire {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: transparent;
+  background: radial-gradient(
+    ellipse at bottom,
+    #ffae00 0%,
+    #ff4500 30%,
+    #8b0000 55%,
+    #000 75%
+  );
 }
 .card .tech {
   display: block;
