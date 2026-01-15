@@ -13,66 +13,72 @@ elements.forEach(el => observer.observe(el))
 const canvas = document.getElementById("fire");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-window.addEventListener("resize", () => {
+function resize() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-});
+}
+resize();
+window.addEventListener("resize", resize);
 
 class Flame {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = canvas.height + Math.random() * 100;
-    this.radius = Math.random() * 6 + 4;
-    this.speed = Math.random() * 1.5 + 0.5;
+  constructor(side) {
+    this.side = side;
+    this.reset();
+  }
+
+  reset() {
+    this.y = canvas.height + Math.random() * 200;
+    this.x =
+      this.side === "left"
+        ? Math.random() * 80
+        : canvas.width - Math.random() * 80;
+
+    this.size = Math.random() * 10 + 6;
+    this.speed = Math.random() * 1.8 + 0.6;
     this.life = 1;
   }
 
   update() {
     this.y -= this.speed;
     this.life -= 0.01;
-    this.radius *= 0.99;
+
+    if (this.life <= 0) this.reset();
   }
 
   draw() {
-    const gradient = ctx.createRadialGradient(
+    const g = ctx.createRadialGradient(
       this.x,
       this.y,
       0,
       this.x,
       this.y,
-      this.radius
+      this.size
     );
 
-    gradient.addColorStop(0, "rgba(255, 255, 180, 1)"); // amarelo quente
-    gradient.addColorStop(0.4, "rgba(255, 140, 0, 0.8)"); // laranja
-    gradient.addColorStop(1, "rgba(180, 0, 0, 0.2)"); // vermelho escuro
+    g.addColorStop(0, "rgba(255,255,180,1)");
+    g.addColorStop(0.4, "rgba(255,140,0,0.9)");
+    g.addColorStop(1, "rgba(180,0,0,0)");
 
     ctx.beginPath();
-    ctx.fillStyle = gradient;
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = g;
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fill();
   }
 }
 
-let flames = [];
+const flames = [];
+
+for (let i = 0; i < 140; i++) {
+  flames.push(new Flame("left"));
+  flames.push(new Flame("right"));
+}
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  if (flames.length < 180) {
-    flames.push(new Flame());
-  }
-
-  flames.forEach((flame, i) => {
-    flame.update();
-    flame.draw();
-
-    if (flame.life <= 0 || flame.radius < 0.5) {
-      flames.splice(i, 1);
-    }
+  flames.forEach(f => {
+    f.update();
+    f.draw();
   });
 
   requestAnimationFrame(animate);
