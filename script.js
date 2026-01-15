@@ -10,63 +10,72 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(el => observer.observe(el))
 
-const canvas = document.getElementById("fireworks");
+const canvas = document.getElementById("fire");
 const ctx = canvas.getContext("2d");
 
-function resize() {
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-}
-resize();
-window.addEventListener("resize", resize);
+});
 
-class Particle {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.radius = Math.random() * 2 + 1;
-    this.color = `hsl(${Math.random() * 360}, 100%, 60%)`;
-    this.speedX = (Math.random() - 0.5) * 4;
-    this.speedY = (Math.random() - 0.5) * 4;
-    this.life = 100;
+class Flame {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = canvas.height + Math.random() * 100;
+    this.radius = Math.random() * 6 + 4;
+    this.speed = Math.random() * 1.5 + 0.5;
+    this.life = 1;
   }
 
   update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    this.life--;
+    this.y -= this.speed;
+    this.life -= 0.01;
+    this.radius *= 0.99;
   }
 
   draw() {
+    const gradient = ctx.createRadialGradient(
+      this.x,
+      this.y,
+      0,
+      this.x,
+      this.y,
+      this.radius
+    );
+
+    gradient.addColorStop(0, "rgba(255, 255, 180, 1)"); // amarelo quente
+    gradient.addColorStop(0.4, "rgba(255, 140, 0, 0.8)"); // laranja
+    gradient.addColorStop(1, "rgba(180, 0, 0, 0.2)"); // vermelho escuro
+
     ctx.beginPath();
+    ctx.fillStyle = gradient;
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = this.color;
     ctx.fill();
   }
 }
 
-let particles = [];
-
-function createFirework() {
-  const x = Math.random() * canvas.width;
-  const y = Math.random() * canvas.height * 0.6;
-
-  for (let i = 0; i < 40; i++) {
-    particles.push(new Particle(x, y));
-  }
-}
+let flames = [];
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  particles.forEach((p, index) => {
-    p.update();
-    p.draw();
-    if (p.life <= 0) particles.splice(index, 1);
+  if (flames.length < 180) {
+    flames.push(new Flame());
+  }
+
+  flames.forEach((flame, i) => {
+    flame.update();
+    flame.draw();
+
+    if (flame.life <= 0 || flame.radius < 0.5) {
+      flames.splice(i, 1);
+    }
   });
 
   requestAnimationFrame(animate);
 }
 
-setInterval(createFirework, 1200);
 animate();
