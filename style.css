@@ -29,7 +29,7 @@ a {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 3px solid #ff3b3b;
+  border: 3px solid #8b5cf6; 
   margin-bottom: 20px;
 }
 
@@ -39,7 +39,7 @@ a {
 }
 
 .hero h1 span {
-  color: #ff3b3b;
+  color: #8b5cf6; 
 }
 
 .hero p {
@@ -47,7 +47,6 @@ a {
   margin: auto;
   color: #cfcfcf;
 }
-
 
 .buttons {
   margin-top: 25px;
@@ -63,15 +62,14 @@ a {
 }
 
 .btn.primary {
-  background: #ff3b3b;
+  background: #8b5cf6; 
   color: #fff;
 }
 
 .btn.outline {
-  border: 1px solid #ff3b3b;
-  color: #ff3b3b;
+  border: 1px solid #8b5cf6; 
+  color: #8b5cf6;
 }
-
 
 section {
   max-width: 1100px;
@@ -82,10 +80,9 @@ section {
 h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  border-left: 4px solid #ff3b3b;
+  border-left: 4px solid #8b5cf6; 
   padding-left: 12px;
 }
-
 
 .projects {
   display: grid;
@@ -100,7 +97,7 @@ h2 {
 }
 
 .card h3 {
-  color: #ff3b3b;
+  color: #8b5cf6; 
   margin-bottom: 10px;
 }
 
@@ -114,12 +111,10 @@ h2 {
   color: #aaa;
 }
 
-
 .about {
   max-width: 800px;
   color: #cfcfcf;
 }
-
 
 .skills {
   display: flex;
@@ -133,7 +128,6 @@ h2 {
   border-radius: 6px;
 }
 
-
 footer {
   text-align: center;
   padding: 40px 20px;
@@ -141,6 +135,6 @@ footer {
 }
 
 footer a {
-  color: #ff3b3b;
+  color: #8b5cf6; 
   font-weight: bold;
 }
