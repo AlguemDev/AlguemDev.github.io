@@ -656,9 +656,10 @@ footer {
 
 .footer-main {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 30px;
   padding-bottom: 38px;
+  align-items: start;
 }
 
 .footer-brand {
