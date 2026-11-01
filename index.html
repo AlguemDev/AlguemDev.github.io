@@ -4,19 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
-<meta name="description" content="Portfólio de Alguém — Desenvolvedor Web e Designer Gráfico.">
-<title>Alguém — Desenvolvedor & Designer</title>
+<meta name="description" content="Portfólio de Miguel — Desenvolvedor Web e Designer Gráfico.">
+<title>Miguel — Desenvolvedor & Designer</title>
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-
 <header class="topbar">
   <div class="topbar-content">
-    <a href="#" class="brand" aria-label="Página inicial">
-      <span class="brand-symbol">A</span>
-      <span>Alguém</span>
-    </a>
-
+    <a href="#" class="brand" aria-label="Página inicial"><span class="brand-symbol">M</span><span>Miguel</span></a>
     <nav class="topbar-links" aria-label="Navegação principal">
       <a href="#projetos" data-tab-link="trabalho">Trabalhos</a>
       <a href="#sobre" data-tab-link="informacoes">Sobre</a>
@@ -25,233 +21,166 @@
   </div>
 </header>
 
-<div class="cover">
-  <div class="cover-glow"></div>
-</div>
+<div class="cover"><div class="cover-glow"></div></div>
 
 <main class="container">
-
   <section class="profile">
     <div class="profile-content">
-      <img
-        class="profile-photo"
-        src="https://i.postimg.cc/47m0SvZ0/girzj6esjc7a1.jpg"
-        alt="Foto de perfil do Alguém"
-      >
-
+      <img class="profile-photo" src="https://i.postimg.cc/47m0SvZ0/girzj6esjc7a1.jpg" alt="Foto de perfil do Miguel">
       <div class="profile-info">
-        <h1>Alguém</h1>
+        <h1>Miguel</h1>
         <p class="profile-description">Desenvolvedor Web & Designer Gráfico</p>
         <p class="profile-location">Brasil · Desenvolvendo ideias e experiências</p>
       </div>
-
-      <div class="profile-actions">
-        <a href="#contato">Entrar em contato ↗</a>
-      </div>
+      <div class="profile-actions"><a href="#contato">Entrar em contato ↗</a></div>
     </div>
   </section>
 
   <nav class="profile-tabs" aria-label="Seções do perfil">
-    <button class="tab-button active" data-tab="informacoes" type="button">
-      Informações
-    </button>
-
-    <button class="tab-button" data-tab="trabalho" type="button">
-      Trabalhos
-    </button>
+    <button class="tab-button active" data-tab="informacoes" type="button">Informações</button>
+    <button class="tab-button" data-tab="trabalho" type="button">Trabalhos</button>
   </nav>
 
   <section id="informacoes" class="tab-content active">
-
     <div class="section-heading">
       <h2>Sobre mim</h2>
       <p>Conheça um pouco do meu trabalho.</p>
     </div>
-
-    <div class="about-grid">
-
-      <div class="about-text">
+    <div class="about-topics">
+      <article class="topic-card about-intro reveal">
+        <span class="topic-kicker">APRESENTAÇÃO</span>
+        <h3>Quem sou</h3>
         <p>Sou desenvolvedor web e designer gráfico, interessado em criar projetos com identidade visual, organização e funcionalidades bem construídas.</p>
+      </article>
 
-        <p>Estou sempre buscando aprender na prática, desenvolver novas habilidades e transformar ideias em projetos reais. Meu objetivo é unir tecnologia e criatividade para criar experiências digitais de qualidade.</p>
+      <article class="topic-card reveal">
+        <span class="topic-kicker">MINHA JORNADA</span>
+        <h3>Aprendizado na prática</h3>
+        <p>Estou sempre buscando aprender na prática, desenvolver novas habilidades e transformar ideias em projetos reais. Gosto de experimentar, testar soluções e evoluir a cada projeto.</p>
+      </article>
 
-        <p>Este portfólio reúne meus projetos, experimentos e trabalhos desenvolvidos durante minha evolução como desenvolvedor e designer.</p>
-      </div>
+      <article class="topic-card reveal">
+        <span class="topic-kicker">MEU OBJETIVO</span>
+        <h3>Tecnologia e criatividade</h3>
+        <p>Meu objetivo é unir tecnologia e criatividade para criar experiências digitais de qualidade. Este portfólio reúne projetos, experimentos e trabalhos desenvolvidos durante minha evolução.</p>
+      </article>
 
-      <div class="about-box">
-        <h3>Habilidades</h3>
-
+      <article class="topic-card skills-card reveal">
+        <span class="topic-kicker">TECNOLOGIAS</span>
+        <h3>Linguagens & desenvolvimento</h3>
         <div class="skills">
-          <span class="skill">HTML</span>
-          <span class="skill">CSS</span>
-          <span class="skill">JavaScript</span>
-          <span class="skill">PHP</span>
-          <span class="skill">Pawn</span>
-          <span class="skill">XML</span>
-          <span class="skill">Git</span>
-          <span class="skill">GitHub</span>
-          <span class="skill">UI/UX</span>
-          <span class="skill">Design gráfico</span>
+          <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">PHP</span><span class="skill">Pawn</span><span class="skill">Lua</span><span class="skill">Java</span><span class="skill">XML</span>
         </div>
-      </div>
+      </article>
 
+      <article class="topic-card skills-card reveal">
+        <span class="topic-kicker">WORKFLOW</span>
+        <h3>Ferramentas</h3>
+        <div class="skills">
+          <span class="skill">Git</span><span class="skill">GitHub</span>
+        </div>
+      </article>
+
+      <article class="topic-card skills-card reveal">
+        <span class="topic-kicker">CRIATIVIDADE</span>
+        <h3>Design & interfaces</h3>
+        <div class="skills">
+          <span class="skill">UI/UX</span><span class="skill">Design gráfico</span><span class="skill">Identidade visual</span>
+        </div>
+      </article>
     </div>
   </section>
 
   <section id="trabalho" class="tab-content">
-
     <div class="section-heading">
       <h2>Meus trabalhos</h2>
       <p>Projetos, estudos e experiências criativas.</p>
     </div>
-
     <div class="projects">
-
       <article class="project-card reveal">
         <div class="project-cover">
           <div class="project-placeholder">
-            <div>
-              <span>WEB DEV</span>
-              <small>DESENVOLVIMENTO WEB</small>
-            </div>
+            <div><span>WEB DEV</span><small>DESENVOLVIMENTO WEB</small></div>
           </div>
         </div>
-
         <div class="project-info">
           <h3>Projeto pessoal</h3>
           <p>Desenvolvimento de páginas web com foco em organização, estrutura, identidade visual e responsividade.</p>
-
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
+          <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
         </div>
       </article>
-
       <article class="project-card reveal">
         <div class="project-cover">
           <div class="project-placeholder">
-            <div>
-              <span>DESIGN</span>
-              <small>IDENTIDADE VISUAL</small>
-            </div>
+            <div><span>DESIGN</span><small>IDENTIDADE VISUAL</small></div>
           </div>
         </div>
-
         <div class="project-info">
           <h3>Design gráfico</h3>
           <p>Estudos e criações visuais para desenvolver composições, conceitos e identidades para projetos digitais.</p>
-
-          <div class="project-tags">
-            <span>Design</span>
-            <span>Identidade visual</span>
-          </div>
+          <div class="project-tags"><span>Design</span><span>Identidade visual</span></div>
         </div>
       </article>
-
       <article class="project-card reveal">
         <div class="project-cover">
           <div class="project-placeholder">
-            <div>
-              <span>SA-MP</span>
-              <small>GAMING & INTERFACES</small>
-            </div>
+            <div><span>SA-MP</span><small>GAMING & INTERFACES</small></div>
           </div>
         </div>
-
         <div class="project-info">
           <h3>Projetos SA-MP</h3>
           <p>Experimentos com interfaces, sistemas e elementos visuais para projetos relacionados a servidores de RP.</p>
-
-          <div class="project-tags">
-            <span>Pawn</span>
-            <span>UI</span>
-            <span>Design</span>
-          </div>
+          <div class="project-tags"><span>Pawn</span><span>UI</span><span>Design</span></div>
         </div>
       </article>
-
       <article class="project-card reveal">
         <div class="project-cover">
           <div class="project-placeholder">
-            <div>
-              <span>WEB UI</span>
-              <small>INTERFACES DIGITAIS</small>
-            </div>
+            <div><span>WEB UI</span><small>INTERFACES DIGITAIS</small></div>
           </div>
         </div>
-
         <div class="project-info">
           <h3>Interfaces e layouts</h3>
           <p>Estudos de componentes, organização de conteúdo e criação de interfaces para diferentes dispositivos.</p>
-
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>UI/UX</span>
-          </div>
+          <div class="project-tags"><span>HTML</span><span>CSS</span><span>UI/UX</span></div>
         </div>
       </article>
-
       <article class="project-card reveal">
         <div class="project-cover">
           <div class="project-placeholder">
-            <div>
-              <span>JAVASCRIPT</span>
-              <small>SISTEMAS E FUNCIONALIDADES</small>
-            </div>
+            <div><span>JAVASCRIPT</span><small>SISTEMAS E FUNCIONALIDADES</small></div>
           </div>
         </div>
-
         <div class="project-info">
           <h3>Experimentos e estudos</h3>
           <p>Pequenos sistemas e testes práticos voltados ao aprendizado e à evolução na programação.</p>
-
-          <div class="project-tags">
-            <span>JavaScript</span>
-            <span>GitHub</span>
-          </div>
+          <div class="project-tags"><span>JavaScript</span><span>GitHub</span></div>
         </div>
       </article>
-
       <article class="project-card reveal">
         <div class="project-cover">
           <div class="project-placeholder">
-            <div>
-              <span>PORTFOLIO</span>
-              <small>PROJETOS PESSOAIS</small>
-            </div>
+            <div><span>PORTFOLIO</span><small>PROJETOS PESSOAIS</small></div>
           </div>
         </div>
-
         <div class="project-info">
           <h3>Projetos futuros</h3>
           <p>Espaço reservado para apresentar novos projetos, trabalhos publicados e experiências desenvolvidas.</p>
-
-          <div class="project-tags">
-            <span>Desenvolvimento</span>
-            <span>Criatividade</span>
-          </div>
+          <div class="project-tags"><span>Desenvolvimento</span><span>Criatividade</span></div>
         </div>
       </article>
-
     </div>
   </section>
-
 </main>
 
 <section id="contato">
   <div class="container">
     <div class="contact-panel">
       <h2>Vamos conversar?</h2>
-
       <p>Tem uma ideia, um projeto ou quer conhecer melhor meu trabalho? Entre em contato pelas minhas redes.</p>
-
       <div class="contact-links">
-        <a href="https://github.com/AlguemDev" target="_blank" rel="noopener noreferrer">
-          GitHub ↗
-        </a>
+        <a href="https://github.com/AlguemDev" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        
       </div>
     </div>
   </div>
@@ -259,47 +188,32 @@
 
 <footer>
   <div class="container">
-
     <div class="footer-main">
-
       <div class="footer-brand-column">
-        <div class="footer-brand">Alguém</div>
-
-        <p class="footer-description">
-          Desenvolvedor Web & Designer Gráfico.
-          Criatividade, tecnologia e projetos em constante evolução.
-        </p>
+        <div class="footer-brand">Miguel</div>
+        <p class="footer-description">Desenvolvedor Web & Designer Gráfico. Criatividade, tecnologia e projetos em constante evolução.</p>
       </div>
-
       <div class="footer-column">
         <h3>Explorar</h3>
-        <a href="#sobre" data-footer-tab="informacoes">Sobre mim</a>
-        <a href="#projetos" data-footer-tab="trabalho">Meus trabalhos</a>
+        <a href="#" data-footer-tab="informacoes">Sobre mim</a>
+        <a href="https://github.com/AlguemDev" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
-
       <div class="footer-column">
         <h3>Redes e projetos</h3>
-        <a href="https://github.com/AlguemDev" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
+        <a href="https://github.com/AlguemDev" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
-
       <div class="footer-column">
         <h3>Contato</h3>
         <a href="mailto:eualguemdev@gmail.com">eualguemdev@gmail.com</a>
       </div>
-
     </div>
-
     <div class="footer-bottom">
-      <span>© 2026 — ALGUÉM. Todos os direitos reservados.</span>
+      <span>© 2026 — MIGUEL. Todos os direitos reservados.</span>
       <a href="#">Voltar ao topo ↑</a>
     </div>
-
   </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
-      </html>
+</html>
